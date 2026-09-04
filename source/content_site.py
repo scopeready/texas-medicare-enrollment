@@ -19,11 +19,11 @@ SITE = dict(
     network=[("Medicare Enrollment Arizona", "https://www.medicareenrollmentarizona.com"), ("Georgia Medicare Enrollment", "https://georgiamedicareenrollment.com"),
              ("Minnesota Medicare Enrollment", "https://minnesotamedicareenrollment.com"), ("Medicare Enrollment Nevada", "https://medicareenrollmentnevada.com"),
              ("Colorado Medicare Enrollment", "https://coloradomedicareenrollment.com"), ("Tennessee Medicare Quotes", "https://www.tennesseemedicarequotes.com"),
-             ("Medicare Enrollment Utah", "https://medicareenrollmentutah.com"), ("Medicare Enrollment Florida", "https://medicareenrollmentflorida.com"),
+             ("Medicare Enrollment Utah", "https://medicareenrollmentutah.com"), ("Medicare Enrollment Florida", "https://medicareenrollmentflorida.com"), ("California Medicare Enrollment", "https://www.californiamedicareenrollment.com"),
              ("MyMedigapRate — Medigap rate research", "https://www.mymedigaprate.com"), ("MyECOS360 — Darin's author page", "https://www.myecos360.com/darin-weidauer")],
     sameas_org_extra=["https://howdoiapplyformedicare.com", "https://medicareadvantageanswers.com", "https://dentalinsurancetomorrow.com"],
     sameas_darin=["https://www.myecos360.com/darin-weidauer", "https://www.linkedin.com/in/darin-weidauer-3165a816b/", "https://www.youtube.com/channel/UCD1XkkknhQ3UT-8AteYD3vQ",
-                  "https://www.medicareenrollmentarizona.com/about", "https://minnesotamedicareenrollment.com/about", "https://georgiamedicareenrollment.com/", "https://medicareenrollmentutah.com/about", "https://medicareenrollmentflorida.com/about", "https://www.mymedigaprate.com/about"],
+                  "https://www.medicareenrollmentarizona.com/about", "https://minnesotamedicareenrollment.com/about", "https://georgiamedicareenrollment.com/", "https://medicareenrollmentutah.com/about", "https://medicareenrollmentflorida.com/about", "https://www.californiamedicareenrollment.com/about", "https://www.mymedigaprate.com/about"],
     tpmo=("We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. "
           "Please contact Medicare.gov, 1-800-MEDICARE, or the Texas Health Information, Counseling and Advocacy Program (HICAP, Texas&rsquo;s State Health "
           "Insurance Assistance Program, 800-252-9240) to get information on all of your options."),

@@ -20,6 +20,11 @@ STATE, PLAN_YEAR, ISO, REVIEWED, FIG = S["state"], S["plan_year"], S["iso"], S["
 NETWORK = S["network"]
 SAMEAS_ORG = [u for _, u in NETWORK] + S.get("sameas_org_extra", [])
 SAMEAS_DARIN = S["sameas_darin"]
+# Optional state producer licence shown next to the NPN wherever Darin is named (California requires the
+# licence number adjacent to the licensee's name, Cal. Ins. Code 1725.5). Absent on sites that do not need it.
+LIC = S.get("state_license")          # e.g. "0M00978"
+LIC_LABEL = S.get("state_license_label", "License")   # e.g. "CA License"
+LIC_TXT = f", {LIC_LABEL} #{LIC}" if LIC else ""
 REGION = {r["slug"]: r for r in REGIONS}
 CITY = {c["slug"]: c for c in CITIES}
 BASE = {b["slug"]: b for b in BASES}
@@ -71,7 +76,7 @@ def footer():
         <p class="footer-brand">{ORG}</p>
         <p style="margin-bottom:.6em">{S["footer_tagline"]}</p>
         <p><a href="tel:{TEL}"><strong>{PHONE}</strong></a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
-        <p style="font-size:.85rem">Darin Weidauer, licensed insurance agent, NPN {NPN}. Statewide by phone and video.</p>
+        <p style="font-size:.85rem">Darin Weidauer, licensed insurance agent, NPN {NPN}{LIC_TXT}. Statewide by phone and video.</p>
       </div>
       {cols}
     </div>
@@ -84,7 +89,7 @@ def footer():
     <div class="disclaimer">
       <p><strong>Medicare disclaimer.</strong> {S["tpmo"]}</p>
       <p>{ORG} is not connected with or endorsed by the U.S. government or the federal Medicare program, and is not affiliated with {S["not_affiliated"]}, the U.S. Department of Veterans Affairs, the Department of Defense, or the TRICARE program. This is a solicitation for insurance. A licensed insurance agent may contact you.</p>
-      <p>Insurance products are offered through {ORG}. Darin Weidauer is a licensed insurance agent in {STATE} (NPN {NPN}) and 14 other states. We may receive compensation from insurance carriers for policies we sell; you pay the same premium whether you enroll through us, another agent, or the carrier directly.</p>
+      <p>Insurance products are offered through {ORG}. Darin Weidauer is a licensed insurance agent in {STATE} (NPN {NPN}{LIC_TXT}) and 14 other states. We may receive compensation from insurance carriers for policies we sell; you pay the same premium whether you enroll through us, another agent, or the carrier directly.</p>
       <p>&copy; <span id="yr">{ISO[:4]}</span> {ORG}. Not affiliated with any government agency.</p>
     </div>
   </div>
@@ -188,7 +193,7 @@ def byline():
     return f'''<section class="section" style="padding-top:0"><div class="wrap">
 <div class="byline">
 <img src="/darin.jpg" alt="Darin Weidauer" width="52" height="52" loading="lazy">
-<p>Written and reviewed by <a href="/about"><strong>Darin Weidauer</strong></a> &mdash; licensed insurance agent (NPN {NPN}), Gerontologist (USC Leonard Davis School of Gerontology), MBA, Registered Social Security Analyst, and 22-year U.S. Air Force veteran.<span class="rev">Last reviewed {REVIEWED}. Plan availability, benefits and costs change every plan year &mdash; verify current details at <a href="https://www.medicare.gov" rel="noopener">Medicare.gov</a>, 1-800-MEDICARE, or {S["ship_name"]} at {S["ship_phone"]}.</span></p>
+<p>Written and reviewed by <a href="/about"><strong>Darin Weidauer</strong></a> &mdash; licensed insurance agent (NPN {NPN}{LIC_TXT}), Gerontologist (USC Leonard Davis School of Gerontology), MBA, Registered Social Security Analyst, and 22-year U.S. Air Force veteran.<span class="rev">Last reviewed {REVIEWED}. Plan availability, benefits and costs change every plan year &mdash; verify current details at <a href="https://www.medicare.gov" rel="noopener">Medicare.gov</a>, 1-800-MEDICARE, or {S["ship_name"]} at {S["ship_phone"]}.</span></p>
 </div></div></section>
 '''
 
@@ -205,11 +210,11 @@ def org_graph(area=None):
         {"@type": "WebSite", "@id": f"{SITE_URL}/#website", "url": f"{SITE_URL}/", "name": S["name"], "publisher": {"@id": f"{SITE_URL}/#org"}, "inLanguage": "en-US"},
         {"@type": "Person", "@id": f"{SITE_URL}/#darin", "name": "Darin Weidauer", "honorificSuffix": "MBA, RSSA",
          "image": f"{SITE_URL}/darin.jpg", "url": f"{SITE_URL}/about", "jobTitle": "Independent Medicare Insurance Agent & Gerontologist",
-         "identifier": {"@type": "PropertyValue", "propertyID": "NPN", "value": NPN}, "worksFor": {"@id": f"{SITE_URL}/#org"},
+         "identifier": ([{"@type": "PropertyValue", "propertyID": "NPN", "value": NPN}, {"@type": "PropertyValue", "propertyID": f"{STATE} insurance license", "value": LIC}] if LIC else {"@type": "PropertyValue", "propertyID": "NPN", "value": NPN}), "worksFor": {"@id": f"{SITE_URL}/#org"},
          "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Pepperdine University"}, {"@type": "CollegeOrUniversity", "name": "University of Southern California"}],
          "hasCredential": [{"@type": "EducationalOccupationalCredential", "credentialCategory": "Registered Social Security Analyst (RSSA)"},
                            {"@type": "EducationalOccupationalCredential", "credentialCategory": "Credentialed Gerontologist"},
-                           {"@type": "EducationalOccupationalCredential", "credentialCategory": f"Licensed insurance agent, {STATE} (NPN {NPN})"}],
+                           {"@type": "EducationalOccupationalCredential", "credentialCategory": f"Licensed insurance agent, {STATE} (NPN {NPN}{LIC_TXT})"}],
          "knowsAbout": ["Medicare", "Medigap", "Social Security claiming", "Gerontology", "Retirement planning"], "sameAs": SAMEAS_DARIN},
     ]}
 
@@ -463,7 +468,7 @@ def build_home():
       <div>
         <h2 style="margin-bottom:.15em">Darin Weidauer, MBA, RSSA&reg;</h2>
         <p style="font-weight:700;color:var(--lake-dark);margin-bottom:.6em">Gerontologist · Registered Social Security Analyst&reg; · U.S. Air Force Veteran</p>
-        <ul class="creds"><li>NPN {NPN} · licensed in {STATE}</li><li>Credentialed gerontologist (2014)</li><li>RSSA&reg;</li><li>22-yr USAF veteran (retired officer)</li><li>Author, <em>Retire With Confidence</em></li></ul>
+        <ul class="creds"><li>NPN {NPN} · licensed in {STATE}{LIC_TXT}</li><li>Credentialed gerontologist (2014)</li><li>RSSA&reg;</li><li>22-yr USAF veteran (retired officer)</li><li>Author, <em>Retire With Confidence</em></li></ul>
         {H["author_html"]}
       </div>
     </div>
@@ -557,7 +562,7 @@ def write_discovery():
 Contact: {PHONE} · {EMAIL} · {SITE_URL}/
 
 ## About
-{ORG} is an independent Medicare insurance agency serving the State of {STATE}. Agent: Darin Weidauer, MBA, RSSA — gerontologist, Registered Social Security Analyst, 22-year U.S. Air Force veteran, licensed in {STATE}, NPN {NPN}. Help is free to the consumer; independent agents are paid by carriers at enrollment, and the premium is the same whichever way you buy. Author page: https://www.myecos360.com/darin-weidauer
+{ORG} is an independent Medicare insurance agency serving the State of {STATE}. Agent: Darin Weidauer, MBA, RSSA — gerontologist, Registered Social Security Analyst, 22-year U.S. Air Force veteran, licensed in {STATE}, NPN {NPN}{LIC_TXT}. Help is free to the consumer; independent agents are paid by carriers at enrollment, and the premium is the same whichever way you buy. Author page: https://www.myecos360.com/darin-weidauer
 
 ## What to know about Medicare in {STATE}
 {facts}
