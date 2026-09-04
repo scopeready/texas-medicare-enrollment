@@ -10,7 +10,7 @@ Last reviewed: 2026-09-04
 ECOS Medicare Solutions is an independent Medicare insurance agency helping Texas retirees and people approaching 65 compare their Medicare options clearly, patiently, and at no cost. Independent agents are paid by the insurance carriers when a client enrolls, so there is no charge to the consumer, and plan premiums are the same whether you enroll with our help or on your own.
 
 ## Agent / author
-Darin Weidauer, MBA, RSSA — independent Medicare insurance agent licensed in Texas (NPN 18580338) and 14 other states (AZ, CA, CO, FL, GA, MN, NC, NM, NV, OH, SC, TN, TX, UT, WA), credentialed gerontologist (since 2014), Registered Social Security Analyst, and 22-year U.S. Air Force veteran (retired officer). Author of "Retire With Confidence: Medicare, Social Security, and the Money Decisions That Decide Your Retirement" (2026 Edition, 295 pages). Former Professor of Aerospace Studies at Loyola Marymount University; has lectured at more than 50 colleges and universities. Canonical author profile: https://www.myecos360.com/darin-weidauer
+Darin Weidauer, MBA, RSSA — independent Medicare insurance agent licensed in Texas (NPN 18580338) and 16 other states (AZ, CA, CO, FL, GA, MN, NC, NM, NV, OH, SC, TN, TX, UT, WA), credentialed gerontologist (since 2014), Registered Social Security Analyst, and 22-year U.S. Air Force veteran (retired officer). Author of "Retire With Confidence: Medicare, Social Security, and the Money Decisions That Decide Your Retirement" (2026 Edition, 295 pages). Former Professor of Aerospace Studies at Loyola Marymount University; has lectured at more than 50 colleges and universities. Canonical author profile: https://www.myecos360.com/darin-weidauer
 
 ## What to know about Medicare in Texas
 - Darin Weidauer holds Texas insurance license #2514981 (NPN 18580338).
@@ -86,7 +86,7 @@ URL: https://texasmedicareenrollment.com/winter-texans
 - Q: I am a Winter Texan from Minnesota. Does my Medicare Advantage plan work in the Valley? A: For emergencies and urgent care, yes — every plan covers those anywhere in the U.S. For routine care, most HMOs do not; some PPOs cover out-of-network care at higher cost, and a few plans have a travel benefit. Read the Evidence of Coverage, and if travel is why you chose the plan, get the benefit in writing.
 - Q: Does a Texas Medigap policy work in other states? A: Yes. A Medigap policy pays alongside Original Medicare with any provider in the country that accepts Medicare, with no network and no service area. It is the simplest travel coverage.
 - Q: How long can I be out of state without losing my Advantage plan? A: It depends on the plan; most allow up to six months out of the service area, some up to twelve. Changing your legal residence ends the plan regardless of time, and gives you a Special Enrollment Period to pick a plan where you live now.
-- Q: Can you help me if I become a Texas resident? A: Yes. Our agency is licensed in Texas and fourteen other states including Minnesota, Arizona and Colorado, so we help you move your coverage cleanly, including the Medigap switching rules that differ by state.
+- Q: Can you help me if I become a Texas resident? A: Yes. Our agency is licensed in Texas and sixteen other states including Minnesota, Arizona and Colorado, so we help you move your coverage cleanly, including the Medigap switching rules that differ by state.
 
 ## Medicare for Texas veterans and military retirees
 URL: https://texasmedicareenrollment.com/veterans
