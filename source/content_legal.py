@@ -14,13 +14,14 @@ FAQ_PAGE = [
     ("What is STAR+PLUS?", "Texas&rsquo;s Medicaid managed-care program for adults 65 and over and people with disabilities. It coordinates the Medicaid side, including long-term services and supports, while Medicare pays first for medical care. Many STAR+PLUS carriers also offer Dual Special Needs Plans on the Medicare side."),
     ("Where can I get free, unbiased Medicare counseling in Texas?", "Texas HICAP, the Health Information, Counseling and Advocacy Program, is Texas&rsquo;s State Health Insurance Assistance Program: 800-252-9240, through your Area Agency on Aging. You can also call 1-800-MEDICARE or use Medicare.gov. We are an independent agency, not a government program, and we say so on every page."),
     ("Do you offer every plan available in my area?", "No. We represent a number of insurance organizations and products in Texas, not all of them, and we will always say so. For the complete list, use Medicare.gov, 1-800-MEDICARE or Texas HICAP. For help choosing among the plans we do offer, call [[PHONE]]."),
+    ("Where can I verify your Texas license?", "Darin Weidauer holds Texas insurance license #2514981 (NPN 18580338). You can verify it through the Texas Department of Insurance license lookup or through the NIPR."),
     ("Do you meet in person?", "We work with Texans statewide by phone and video, which is how most people prefer it across a state this size. Our sister agency has walk-in offices in Mesa and Sun City, Arizona."),
 ]
 
 ABOUT_BODY = """<div class="author" style="margin-bottom:2rem">
 <img class="author__photo" src="/darin.jpg" width="600" height="600" alt="Darin Weidauer, independent Medicare insurance agent and credentialed gerontologist" loading="lazy" decoding="async">
 <div>
-<ul class="creds"><li>NPN 18580338 · licensed in Texas</li><li>Credentialed gerontologist (2014)</li><li>Registered Social Security Analyst&reg;</li><li>MBA, Pepperdine</li><li>Master&rsquo;s in Long-Term Care, USC</li><li>22-yr USAF veteran (retired officer)</li></ul>
+<ul class="creds"><li>TX License #2514981 · NPN 18580338</li><li>Credentialed gerontologist (2014)</li><li>Registered Social Security Analyst&reg;</li><li>MBA, Pepperdine</li><li>Master&rsquo;s in Long-Term Care, USC</li><li>22-yr USAF veteran (retired officer)</li></ul>
 <p>Darin Weidauer is an independent Medicare insurance agent, credentialed gerontologist, and Registered Social Security Analyst&reg; who helps Texas retirees and people approaching 65 make sense of their Medicare options &mdash; clearly, patiently, and with no cost to them.</p>
 </div></div>
 <h2>Background</h2>
@@ -30,7 +31,7 @@ ABOUT_BODY = """<div class="author" style="margin-bottom:2rem">
 <p>ECOS Medicare Solutions is an independent agency: appointed with a number of Medicare Advantage, Medigap and Part D carriers in Texas, employed by none of them. When you enroll in a plan through us, the carrier pays us a commission. That commission comes out of the carrier&rsquo;s filed rate &mdash; it is never added to your premium. You pay the same whether you enroll through us, through another agent, or directly with the insurer; going direct does not make a policy cheaper, and using us does not make it dearer.</p>
 <p>We do not represent every plan sold in Texas, and we say so on every page. For a complete list, use Medicare.gov, 1-800-MEDICARE, or Texas HICAP (800-252-9240), the state&rsquo;s free and independent counseling program.</p>
 <h2>Licensing</h2>
-<p>Darin is a licensed insurance agent in Texas and fourteen other states &mdash; Arizona, California, Colorado, Florida, Georgia, Minnesota, Nevada, New Mexico, North Carolina, Ohio, South Carolina, Tennessee, Utah and Washington &mdash; under National Producer Number 18580338, which you can verify with the Texas Department of Insurance or the NIPR. The multi-state licence is what lets us follow <a href="/winter-texans">Winter Texans</a> home to Minnesota and Texans to their second homes in Colorado and New Mexico.</p>
+<p>Darin Weidauer holds <strong>Texas insurance license #2514981</strong> and is a licensed insurance agent in Texas and fourteen other states &mdash; Arizona, California, Colorado, Florida, Georgia, Minnesota, Nevada, New Mexico, North Carolina, Ohio, South Carolina, Tennessee, Utah and Washington &mdash; under National Producer Number 18580338, which you can verify with the Texas Department of Insurance or the NIPR. The multi-state licence is what lets us follow <a href="/winter-texans">Winter Texans</a> home to Minnesota and Texans to their second homes in Colorado and New Mexico.</p>
 <h2>Where else you will find him</h2>
 <ul>
 <li><a href="https://www.myecos360.com/darin-weidauer" rel="noopener">Author page at MyECOS360</a> &mdash; the canonical profile</li>
@@ -67,7 +68,7 @@ TERMS_BODY = """<p style="color:var(--ink-soft)"><em>Last updated: September 4, 
 <h2>Informational purpose</h2>
 <p>The Site provides general information about Medicare to help you make decisions. It is not legal, tax or medical advice, and it is not a substitute for the official Medicare program or for Texas&rsquo;s free counseling program, HICAP. Medicare plan availability, costs and rules change and vary by county.</p>
 <h2>Insurance offered through a licensed agent</h2>
-<p>Insurance products referenced on the Site are offered through a licensed insurance agent (Darin Weidauer, NPN 18580338, licensed in Texas). Enrollment is subject to plan terms and eligibility. We do not offer every plan available in your area.</p>
+<p>Insurance products referenced on the Site are offered through a licensed insurance agent (Darin Weidauer, Texas insurance license #2514981, NPN 18580338). Enrollment is subject to plan terms and eligibility. We do not offer every plan available in your area.</p>
 <h2>No guarantee of accuracy</h2>
 <p>We work to keep figures current and cite the year and source, but we do not warrant that all information is complete, current or error-free. Always confirm details with the official sources noted on the Site.</p>
 <h2>External links</h2>
