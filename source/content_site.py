@@ -13,17 +13,19 @@ SITE = dict(
     org="ECOS Medicare Solutions", state="Texas", abbr="TX", demonym="Texans",
     # TODO(Darin): swap for a Texas (512 / 713 / 214 / 210) number. The agency's main line keeps the site from launching with a dead phone.
     phone="(702) 706-6564", tel="+17027066564", email="darinweidauer@ecos.care", npn="18580338",
+    # Texas requires... the producer licence number is shown beside Darin's name site-wide via the engine.
+    state_license="2514981", state_license_label="TX License",
     web3forms_key="fc793a1c-1dd6-4a2e-9078-e907c4ab0428", quote_url="https://planenroll.com/?purl=Darin-Weidauer",
     plan_year=2026, iso=TODAY.isoformat(), reviewed=TODAY.strftime("%B %-d, %Y"),
     fig=dict(partb="$202.90", partb_ded="$283", parta_ded="$1,736", partd_cap="$2,100", partd_ded="$615", partd_base="$38.99", irmaa_single="$109,000", irmaa_joint="$218,000"),
     network=[("Medicare Enrollment Arizona", "https://www.medicareenrollmentarizona.com"), ("Georgia Medicare Enrollment", "https://georgiamedicareenrollment.com"),
              ("Minnesota Medicare Enrollment", "https://minnesotamedicareenrollment.com"), ("Medicare Enrollment Nevada", "https://medicareenrollmentnevada.com"),
              ("Colorado Medicare Enrollment", "https://coloradomedicareenrollment.com"), ("Tennessee Medicare Quotes", "https://www.tennesseemedicarequotes.com"),
-             ("Medicare Enrollment Utah", "https://medicareenrollmentutah.com"), ("Medicare Enrollment Florida", "https://medicareenrollmentflorida.com"),
+             ("Medicare Enrollment Utah", "https://medicareenrollmentutah.com"), ("Medicare Enrollment Florida", "https://medicareenrollmentflorida.com"), ("California Medicare Enrollment", "https://www.californiamedicareenrollment.com"),
              ("MyMedigapRate — Medigap rate research", "https://www.mymedigaprate.com"), ("MyECOS360 — Darin's author page", "https://www.myecos360.com/darin-weidauer")],
     sameas_org_extra=["https://howdoiapplyformedicare.com", "https://medicareadvantageanswers.com", "https://dentalinsurancetomorrow.com"],
     sameas_darin=["https://www.myecos360.com/darin-weidauer", "https://www.linkedin.com/in/darin-weidauer-3165a816b/", "https://www.youtube.com/channel/UCD1XkkknhQ3UT-8AteYD3vQ",
-                  "https://www.medicareenrollmentarizona.com/about", "https://minnesotamedicareenrollment.com/about", "https://georgiamedicareenrollment.com/", "https://medicareenrollmentutah.com/about", "https://medicareenrollmentflorida.com/about", "https://www.mymedigaprate.com/about"],
+                  "https://www.medicareenrollmentarizona.com/about", "https://minnesotamedicareenrollment.com/about", "https://georgiamedicareenrollment.com/", "https://medicareenrollmentutah.com/about", "https://medicareenrollmentflorida.com/about", "https://www.californiamedicareenrollment.com/about", "https://www.mymedigaprate.com/about"],
     tpmo=("We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. "
           "Please contact Medicare.gov, 1-800-MEDICARE, or the Texas Health Information, Counseling and Advocacy Program (HICAP, Texas&rsquo;s State Health "
           "Insurance Assistance Program, 800-252-9240) to get information on all of your options."),
@@ -50,7 +52,8 @@ SITE = dict(
                   title="Texas Medicare FAQ [[YEAR]] | ECOS Medicare Solutions",
                   desc="Plain answers to the Medicare questions Texans ask most: Advantage plans leaving counties, Medigap rules, under-65 Plan A, STAR+PLUS, Winter Texans, TRICARE and 2026 costs."),
     llm_summary="Free, plain-English Medicare guidance for Texas retirees and people approaching 65. Compare Medicare Advantage, Medicare Supplement (Medigap) and Part D drug plans with a credentialed, independent agent at no cost. Statewide service by phone and video, from Houston, Dallas–Fort Worth, San Antonio and Austin to El Paso, the Panhandle and the Rio Grande Valley.",
-    llm_facts=["Texas uses the federal Medigap plan letters (A–N) and has no state birthday or anniversary rule; the Texas Department of Insurance regulates Medigap. Texas requires insurers to offer at least Plan A to people under 65 who are on Medicare because of a disability.",
+    llm_facts=["Darin Weidauer holds Texas insurance license #2514981 (NPN 18580338).",
+               "Texas uses the federal Medigap plan letters (A–N) and has no state birthday or anniversary rule; the Texas Department of Insurance regulates Medigap. Texas requires insurers to offer at least Plan A to people under 65 who are on Medicare because of a disability.",
                "About 2.3 million Texans, roughly half of the state's Medicare beneficiaries, are in Medicare Advantage for 2026. UnitedHealthcare and Humana withdrew plans from a number of rural Texas counties for the 2026 plan year, and Humana has announced further reductions for 2027.",
                "Texas's SHIP is the Health Information, Counseling and Advocacy Program (HICAP), run by Texas Health and Human Services with the Area Agencies on Aging: 800-252-9240.",
                "Texas Medicaid is administered by the Texas Health and Human Services Commission (HHSC); adults 65+ and people with disabilities who qualify are served through the STAR+PLUS managed-care program. Apply at YourTexasBenefits.com. Medicare Savings Programs (QMB, SLMB, QI) are also handled by HHSC and automatically qualify the enrollee for Part D Extra Help.",
@@ -85,7 +88,7 @@ HOME = dict(
     eyebrow="Medicare made clear · Statewide in Texas",
     h1="Medicare in Texas, explained by someone who actually teaches it.",
     sub="Turning 65, retiring, or re-shopping because your plan pulled out of your county? Sit down with a credentialed independent agent who will walk you through Medicare Advantage, Medigap and Part D in plain English &mdash; patiently, and at no cost to you.",
-    trust=[(ICON('<path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/>'), "Licensed in Texas (NPN 18580338)"),
+    trust=[(ICON('<path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/>'), "Licensed in Texas &middot; TX License #2514981 &middot; NPN 18580338"),
            (ICON('<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/>'), "Gerontologist &amp; RSSA&reg;"),
            (ICON('<circle cx="12" cy="8" r="5"/><path d="M8 13l-2 9 6-4 6 4-2-9"/>'), "22-year U.S. Air Force veteran"),
            (ICON('<path d="M20 6L9 17l-5-5"/>'), "Always free to you")],
@@ -106,7 +109,7 @@ HOME = dict(
         ("Medicare + Texas Medicaid", "STAR+PLUS, the Medicare Savings Programs that pay your Part B premium, and Dual Special Needs Plans that coordinate both.", "/medicaid", "Dual-eligible help"),
     ],
     guide_p="A clear, step-by-step walk-through of your enrollment windows, the Texas-specific choices in front of you, and the deadlines that carry a lifelong penalty if you miss them. No sign-up required.",
-    author_html=("<p>Darin Weidauer is an independent Medicare insurance agent, credentialed gerontologist, and Registered Social Security Analyst&reg; who helps Texas retirees and people approaching 65 make sense of their options &mdash; clearly, patiently, and with no cost to them. A 22-year U.S. Air Force veteran who retired as an officer, Darin holds five master&rsquo;s degrees, including an MBA and a Master&rsquo;s in Dispute Resolution from Pepperdine and a Master&rsquo;s in Long-Term Care from USC, and became a credentialed gerontologist in 2014 &mdash; studying the human side of aging, not just the paperwork.</p>"
+    author_html=("<p>Darin Weidauer (TX License #2514981) is an independent Medicare insurance agent, credentialed gerontologist, and Registered Social Security Analyst&reg; who helps Texas retirees and people approaching 65 make sense of their options &mdash; clearly, patiently, and with no cost to them. A 22-year U.S. Air Force veteran who retired as an officer, Darin holds five master&rsquo;s degrees, including an MBA and a Master&rsquo;s in Dispute Resolution from Pepperdine and a Master&rsquo;s in Long-Term Care from USC, and became a credentialed gerontologist in 2014 &mdash; studying the human side of aging, not just the paperwork.</p>"
                  "<p>A former Professor of Aerospace Studies at Loyola Marymount University who has lectured at more than 50 colleges and universities, Darin now channels that teaching instinct into plain-English Medicare education through one-on-one reviews, no-cost workshops, and his book <em>Retire With Confidence</em>. <a href=\"/about\">More about Darin &rarr;</a></p>"),
     areas_lede="We work with Texans by phone and video across all 254 counties. Find Medicare guidance for your city:",
     bases_lede="Near a base? We help military retirees and veterans coordinate TRICARE, VA care and Medicare:",
